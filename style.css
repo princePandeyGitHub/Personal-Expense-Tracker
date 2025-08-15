@@ -1,0 +1,157 @@
+/* ===== Import a modern Google Font ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* ===== Basic Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #f1f1f1;
+    padding: 20px;
+}
+
+/* ===== Main Container ===== */
+#main {
+    max-width: 900px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #00f2fe;
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.7);
+}
+
+/* ===== Form Styling ===== */
+.entry form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.entry label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #f8f8f8;
+}
+
+.entry input, 
+.entry select, 
+.entry button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+}
+
+.entry input, 
+.entry select {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+.entry select option {
+    background: #2c5364;
+    color: white;
+}
+
+.entry button {
+    background: linear-gradient(45deg, #00f2fe, #4facfe);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s;
+}
+
+.entry button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+}
+
+/* ===== Expense List ===== */
+.listedExpenses {
+    margin-top: 25px;
+}
+
+.listedExpenses ul {
+    list-style: none;
+    padding: 0;
+}
+
+.listedExpenses li {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    backdrop-filter: blur(5px);
+    transition: transform 0.2s ease, background 0.3s;
+}
+
+.listedExpenses li:hover {
+    transform: scale(1.02);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.listedExpenses .deletebtn {
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.listedExpenses .deletebtn:hover {
+    transform: scale(1.1);
+}
+
+/* ===== Summary Section ===== */
+.summary {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.summary h2, .summary h3 {
+    margin-bottom: 8px;
+    color: #f1f1f1;
+}
+
+/* ===== Animation ===== */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    .listedExpenses li {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 10px;
+    }
+}

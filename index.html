@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+            <h1>Personal Expense Tracker</h1>
+
+    <div class="entry">
+        <form id="expenseForm" aria-required="true">
+            <label for="amount">Amount</label>
+            <input type="number" name="amount" id="amount" required>
+
+            <label for="date">Date</label>
+            <input type="date" name="date" id="date" required>
+
+            <label for="category">Category</label>
+            <select name="category" id="category">
+                <option value="food">Food</option>
+                <option value="transport">Transport</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="essentials">Essentials</option>
+            </select>
+
+            <label for="addExpense">Add Expense</label>
+            <button type="submit" id="addExpense">Add Expense</button>
+        </form>
+    </div>
+
+    <div class="listedExpenses" id="listedExpenses">
+        <h2 style="text-align: center; padding-bottom: 1px;">Expense List</h2>   
+        <ul id="heading">
+            <li>
+                <span class="amount"><h3>Amount</h3></span>
+                <span class="date"><h3>Date</h3></span>
+                <span class="category"><h3>Category</h3></span>
+            </li>      
+    </div>
+
+    <div class="summary" id="summary">
+        <h3>Food: <span id="foodTotal"></span></h3>
+        <h3>Entertainment: <span id="entertainmentTotal"></span></h3>
+        <h3>Essentials: <span id="essentialsTotal"></span></h3>
+        <h3>Transport: <span id="transportTotal"></span></h3>
+        <h2>Total: <span id="completeTotal"></span></h2>
+    </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
