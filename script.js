@@ -1,5 +1,6 @@
 console.log("This is just testing");
 console.log("This is testing 2");
+console.log("Thsi is testing 3");
 // Load saved data
 let totals = JSON.parse(localStorage.getItem('totals')) || {
     complete: 0,
@@ -74,5 +75,6 @@ function saveData() {
     localStorage.setItem('totals', JSON.stringify(totals));
     localStorage.setItem('expensesHTML', document.getElementById('listedExpenses').innerHTML);
 }
+
 
 
